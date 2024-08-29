@@ -1,0 +1,56 @@
+<html>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    margin-bottom: 5px;
+  }
+
+  .completed {
+    text-decoration: line-through;
+  }
+</style>
+
+<body>
+
+  <h2>To-Do List</h2>
+
+  <input type="text" id="taskInput" placeholder="Enter task">
+  <button onclick="addTask()">Add Task</button>
+
+  <ul id="taskList"></ul>
+
+  <script>
+
+    function addTask() {
+      var taskInput = document.getElementById("taskInput");
+      var taskValue = taskInput.value.trim();
+      if (taskValue !== "") {
+        var li = document.createElement("li");
+        var checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        li.appendChild(checkbox);
+        var taskDescription = document.createElement("span");
+        taskDescription.textContent = taskValue;
+        li.appendChild(taskDescription);
+        document.getElementById("taskList").appendChild(li);
+        taskInput.value = "";
+        checkbox.addEventListener('change', function () {
+          if (checkbox.checked) {
+            taskDescription.classList.add('completed');
+          } else {
+            taskDescription.classList.remove('completed');
+          }
+        });
+      }
+    }
+  </script>
+</body>
+</html>
