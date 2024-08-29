@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Alert Message</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h2>Bootstrap Alert Message</h2>
+        User Name: <input type="text" id="name" class="form-control"><br>
+        Password: <input type="password" id="pswrd" class="form-control"><br>
+        <button class="btn btn-primary" onclick="login()">Login</button>
+        <div id="alert-container" class="mt-3"></div>
+    </div>
+
+    <script>
+        function login() {
+            var username = document.getElementById('name').value;
+            var password = document.getElementById('pswrd').value;
+            var alertContainer = document.getElementById('alert-container');
+
+            // Clear previous alerts
+            alertContainer.innerHTML = '';
+
+            if (username === "Admin" && password === "Admin@123") {
+                alertContainer.innerHTML = '<div class="alert alert-success alert-dismissible fade show" role="alert">' +
+                    '<strong>Success!!</strong> User Credential successful!!' +
+                    '<button type="button" class="close" data-dismiss="alert" aria-label="Close">' +
+                    '<span aria-hidden="true">&times;</span>' +
+                    '</button>' +
+                    '</div>';
+            } else {
+                alertContainer.innerHTML = '<div class="alert alert-danger alert-dismissible fade show" role="alert">' +
+                    '<strong>Sorry!!</strong> Invalid Credential!!' +
+                    '<button type="button" class="close" data-dismiss="alert" aria-label="Close">' +
+                    '<span aria-hidden="true">&times;</span>' +
+                    '</button>' +
+                    '</div>';
+            }
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>
