@@ -1,0 +1,25 @@
+<html>
+  <body>
+    <input type="text" id="char">
+    <button onclick="add()">Add</button>
+    <button onclick="rem()">Remove</button>
+    <p id="printresult"></p>
+    </body>
+    
+    <script>
+      var char = [];
+      
+      function add()
+      {
+        var inputvalue=document.getElementById("char").value;
+        char.push(inputvalue);
+    document.getElementById('printresult').innerHTML = char;
+      }
+  function rem()
+  {
+char.pop();
+document.getElementById('printresult').innerHTML = char;
+  }
+
+</script>
+</html>
