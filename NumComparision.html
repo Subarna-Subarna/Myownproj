@@ -1,0 +1,168 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+   <!-- <body>
+
+<h5>Number Comparision</h5><br>
+
+<input type="number" id="num1">
+<input type="number" id="num2">
+<button onclick="check()">Check</button>
+<p id="printResult"></p>
+
+<script>
+  function check(){
+    const num1 = parseFloat(document.getElementById('num1').value);
+    const num2 = parseFloat(document.getElementById('num2').value);
+    if(num1<num2){
+      document.getElementById('printResult').innerHTML="num1 is Less than num2";
+    }
+    else{
+        document.getElementById('printResult').innerHTML="num1 is Greater than num2";
+      }
+    }
+ </script>  
+    --> 
+
+<!--
+<body>
+
+<h5>Pass Or Fail </h5><br>
+
+  <input type="number" id="num1">
+  <button onclick="check()">Check</button>
+  <p id="printResult"></p>
+
+ <script>
+function check(){
+    const num1 = parseFloat(document.getElementById('num1').value);
+    if(num1<35){
+      document.getElementById('printResult').innerHTML="OH HO! Sorry You are not Pass no - Fail";
+    }
+    else{
+        document.getElementById('printResult').innerHTML="You are move to Next Stage - Pass";
+      }
+    }
+
+ </script> 
+</body>     -->
+
+<!-- 
+  <body>
+
+<h5>Find Zero, Positive & Negative </h5><br>
+
+  <input type="number" id="num1">
+  <button onclick="check()">Check</button>
+  <p id="printResult"></p>
+
+ <script>
+function check(){
+    const num1 = parseFloat(document.getElementById('num1').value);
+    if(num1==0){
+      document.getElementById('printResult').innerHTML="Value is Zero";
+    }
+    else if(num1>0){
+        document.getElementById('printResult').innerHTML="This is Positive value";
+      }
+      else{
+        document.getElementById('printResult').innerHTML="This is Negative value";
+      }
+    }
+ </script> 
+</body>     -->
+
+<!-- 
+<body>
+
+<h5>Find Odd Or Even</h5><br>
+
+  <input type="number" id="num1">
+  <button onclick="check()">Check</button>
+  <p id="printResult"></p>
+
+ <script>
+function check(){
+    const num1 = parseFloat(document.getElementById('num1').value);
+    if(num1 % 2 == 0){
+      document.getElementById('printResult').innerHTML="Value is Even";
+    }
+    else{
+        document.getElementById('printResult').innerHTML="Value is Odd";
+      }
+    }
+ </script> 
+</body>     -->
+
+<body>
+
+  <h5>Finding Percentage</h5>
+  
+  <label for="English">English:</label>
+  <input type="number" id="English"><br><br>
+  <label for="Tamil">Tamil:</label>
+  <input type="number" id="Tamil"><br><br>
+  <label for="Physics">Physics:</label>
+  <input type="number" id="Physics"><br><br>
+  <label for="Chemistry">Chemistry:</label>
+  <input type="number" id="Chemistry"><br><br>
+  <label for="Mathematics">Mathematics:</label>
+  <input type="number" id="Mathematics"><br><br>
+  <label for="Computer">Computer:</label>
+  <input type="number" id="Computer"><br><br>
+  <button onclick="percentage()">Calculate Percentage</button>
+  <p id="percentage"></p>
+  <p id="printResult"></p>
+
+  <script>
+      function percentage() {
+          const English = parseFloat(document.getElementById('English').value);
+          const Tamil = parseFloat(document.getElementById('Tamil').value);
+          const Physics = parseFloat(document.getElementById('Physics').value);
+          const Chemistry = parseFloat(document.getElementById('Chemistry').value);
+          const Mathematics = parseFloat(document.getElementById('Mathematics').value);
+          const Computer = parseFloat(document.getElementById('Computer').value);
+
+         
+          const totalMarks = English + Tamil + Physics + Chemistry + Mathematics + Computer;
+          const percentage = (totalMarks / 600) * 100;
+
+          
+          document.getElementById('percentage').innerText = `Percentage: ${percentage.toFixed(2)}%`;
+          if(percentage >=90){
+            document.getElementById('printResult').innerHTML="Hurray!! Grade A";
+          }
+          else if(percentage>=80){
+            document.getElementById('printResult').innerHTML="Ha Ha!! Grade B";
+          
+          }
+          else if(percentage>=70){
+            document.getElementById('printResult').innerHTML="Ahha!! Grade C";
+          
+          }
+          else if(percentage>=60){
+            document.getElementById('printResult').innerHTML="Hey Hey!! Grade D";
+          
+          }
+          else if(percentage>=50){
+            document.getElementById('printResult').innerHTML="Ho Ho!! Grade E";
+          
+          }
+          else if(percentage<50){
+            document.getElementById('printResult').innerHTML="Oh Ho - Do It BetterWay in Future!! Grade F";
+          
+          }
+      }
+
+
+</script>
+
+</body>
+
+
+</html>
