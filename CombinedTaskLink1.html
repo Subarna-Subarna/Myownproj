@@ -1,0 +1,67 @@
+<html>
+    <body>
+        <!-- Input tag -->
+                
+        <p><h3>Flowers Purchasing Area</h3>
+            <form action="https://www.fnp.com/flowers-lp" method="GET" target="_blank">
+
+                <style>
+                    .grey-text-box {
+                        background-color: #c0bcbc; /* Grey background color */
+                         color: black; /* Text color */
+                    }
+                
+                    .grey-text-box::selection {
+                        background-color: transparent;
+                    }
+                </style>
+                <script>
+                    window.addEventListener('DOMContentLoaded', (event) => {
+                        const flowerIdInput = document.getElementById('FlowerName');
+                
+                        flowerIdInput.addEventListener('input', (event) => {
+                            if (event.target.value.trim() !== '') {
+                                event.target.classList.remove('grey-text-box');
+                                event.target.style.color = '#000'; // Change text color to black
+                            } else {
+                                event.target.classList.add('grey-text-box');
+                                event.target.style.color = '#888'; // Reset text color to grey
+                            }
+                        });
+                    });
+
+                </script>
+                
+            <!-- Add Text box & Enter the Customer Name should be shown defaultly in text box -->
+
+            Customer Name:  <input type="text" placeholder="Subarna"><br><br>
+           
+            
+            <label for="flowerSelect">Flowers Name:</label>
+             <select id="flowerSelect" name="flower">
+                <option value="" selected disabled>Select a flower here</option>
+                <optgroup label="Rose">
+                <option value="Shrub Roses">Shrub</option>
+                <option value="Hybrid Tea Roses">Hybrid Tea</option>
+                <option value="English Roses">English Roses</option>
+            </optgroup>
+            <optgroup label="Lily">
+                <option value="Asiatic">Asiatic</option>
+                <option value="Aurelian">Aurelian</option>
+                <option value="Oriental hybrids">Oriental hybrids</option>
+            </optgroup>
+            <optgroup label="Sunflower">
+                <option value="Skyscraper">Skyscraper</option>
+                <option value="Sunforest Mix">Sunforest Mix</option>
+                <option value="American Giant">American Giant</option>
+            </optgroup>
+                </select><br><br>
+
+               Flower Id <input type="text" id="FlowerName" pattern="[A-Za-z]+" name="FlowerName" class="grey-text-box" placeholder=""><br><br>
+            <input type="submit" value="Submit">
+            </form></p><hr>
+</body>
+</html>
+
+        
+
