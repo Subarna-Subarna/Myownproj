@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    </head>
+    <body>
+        <input type="number" id="number1"><br><br>
+        <input type="number" id="number2"><br><br>
+        <button onclick="add()">Add</button>
+        <button onclick="sub()">Sub</button>
+        <button onclick="mul()">Mul</button>
+        <button onclick="div()">Div</button>
+        <p id="result"></p>
+    
+        <script>
+            function getInputValues() {
+                const num1 = parseFloat(document.getElementById('number1').value);
+                const num2 = parseFloat(document.getElementById('number2').value);
+                return { num1, num2 };
+            }
+    
+            function add() {
+                const { num1, num2 } = getInputValues();
+                const result = num1 + num2;
+                document.getElementById('result').innerText = "Addition: " + result;
+            }
+    
+            function sub() {
+                const { num1, num2 } = getInputValues();
+                const result = num1 - num2;
+                document.getElementById('result').innerText = "Subtraction: " + result;
+            }
+    
+            function mul() {
+                const { num1, num2 } = getInputValues();
+                const result = num1 * num2;
+                document.getElementById('result').innerText = "Multiplication: " + result;
+            }
+    
+            function div() {
+                const { num1, num2 } = getInputValues();
+                if (num2 === 0) {
+                    document.getElementById('result').innerText = "Division: Error (Division by zero)";
+                } else {
+                    const result = num1 / num2;
+                    document.getElementById('result').innerText = "Division: " + result;
+                }
+            }
+        </script>
+    </body>
+</html>
